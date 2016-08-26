@@ -15,7 +15,7 @@ public class PushOnKeyPress : MonoBehaviour
 	void FixedUpdate ()
 	{
         float axis = Input.GetAxis(inputAxis);
-        body.AddForce( axis*force, ForceMode.Impulse );
-        body.AddTorque( axis*torque, ForceMode.Impulse );
+        GetComponent<Rigidbody>().AddForce( axis*force, ForceMode.Impulse );
+        GetComponent<Rigidbody>().AddTorque( axis*torque, ForceMode.Impulse );
 	}
 }
